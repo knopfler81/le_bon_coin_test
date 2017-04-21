@@ -9,6 +9,8 @@ class Advert < ApplicationRecord
   validates :description, presence: true, length: {minimum: 80}
   validates :price, presence: true
   validates :location, presence: true
+  validates :category_id, presence: true
+
   enum role: { Demande: 0, Offre: 1}
 
   def self.search(search)

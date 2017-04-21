@@ -28,3 +28,5 @@ U.save
 ```
 Et hop! Vous êtes admin :)
 Afin de publier une annonce, il vous suffit d'aller dans `localhost:3000/admin` onglets annonces, `edit` et de cocher la check boxe `published`, ainsi l'annonce sera publiée sur le site.
+
+
