@@ -11,4 +11,5 @@ Ce template comporte également une pré organisation du CSS
 
 * Je créer le controller `adverts` , les vues, les routes. 
 
+* J'ajoute un model `category` qui a juste un nom. Et je fais les relations avec le model `advert`
 
