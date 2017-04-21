@@ -49,7 +49,7 @@ puts "Creation des annonces"
     description: Faker::Lorem.paragraph(10),
     price: [0, 230, 1000, 25, 780].sample,
     location:["Lyon", "Saint Etienne", "Paris", "Lilles", "Nantes", "Marseille", "Nice"].sample,
-    photo_urls: ["http://www.vulgaris-medical.com/sites/default/files/styles/big-lightbox/public/field/image/actualites/2016/02/12/le-chat-source-de-bienfaits-pour-votre-sante.jpg","http://www.monchiotetmoi.com/upload/images/chiots-labrador.jpg", "https://www.pairidaiza.eu/uploads/images/4fbe12187be1f.jpg", "https://www.lestaxinomes.org/IMG/jpg/lapin_nain3.jpg", "http://img0.mxstatic.com/ch%E8vre/chevres-troupeau_3510_w620.jpg"].sample(5),
+    photo_urls: ["http://www.vulgaris-medical.com/sites/default/files/styles/big-lightbox/public/field/image/actualites/2016/02/12/le-chat-source-de-bienfaits-pour-votre-sante.jpg","http://www.monchiotetmoi.com/upload/images/chiots-labrador.jpg", "https://www.pairidaiza.eu/uploads/images/4fbe12187be1f.jpg", "https://www.lestaxinomes.org/IMG/jpg/lapin_nain3.jpg", "http://img0.mxstatic.com/ch%E8vre/chevres-troupeau_3510_w620.jpg"].sample(1),
     user_id: User.pluck(:id).sample,
     published: [true, false].sample
    )
@@ -69,7 +69,7 @@ puts "Annonces Animaux crées"
     description: Faker::Lorem.paragraph(10),
     price: [20000, 50000, 10000, 25000, 7080].sample,
     location:["Lyon", "Saint Etienne", "Paris", "Lilles", "Nantes", "Marseille", "Nice"].sample,
-    photo_urls: ["https://www.groupe-psa.com/content/uploads/2016/07/Marque_Peugeot.jpg", "https://www.eaglemoss.com/uploads/141789350311995/original.png", "http://auto.ferrari.com/fr_FR/wp-content/uploads/sites/13/2016/09/ferrari-laferrari-aperta-2016-gallery-prew-1-tr.jpg", "http://photo-voiture.motorlegend.com/hd/jaguar-type-e-serie-1-4-2l-93681.jpg"].sample(4),
+    photo_urls: ["https://www.groupe-psa.com/content/uploads/2016/07/Marque_Peugeot.jpg", "https://www.eaglemoss.com/uploads/141789350311995/original.png", "http://auto.ferrari.com/fr_FR/wp-content/uploads/sites/13/2016/09/ferrari-laferrari-aperta-2016-gallery-prew-1-tr.jpg", "http://photo-voiture.motorlegend.com/hd/jaguar-type-e-serie-1-4-2l-93681.jpg"].sample(1),
     user_id: User.pluck(:id).sample,
     published: [true, false].sample
    )
@@ -88,7 +88,7 @@ puts "Annonces Automobiles crées"
     description: Faker::Lorem.paragraph(10),
     price: [2000, 500, 2300, 800, 1200].sample,
     location:["Lyon", "Saint Etienne", "Paris", "Lilles", "Nantes", "Marseille", "Nice"].sample,
-    photo_urls: ["http://www.h-immo.com/Photo_1367.jpeg", "http://location.lavirotte.com/images/illust/studio.jpg", "https://s-media-cache-ak0.pinimg.com/736x/71/5e/92/715e9221cec4884d4d5afcee7739284a.jpg", "http://resize-elle.ladmedia.fr/r/300,210,center-middle,forcex,000000/img/var/plain_site/storage/images/deco/pieces/chambre/chambre-moderne-3181915/69348118-1-fre-FR/Lecon-de-deco-creez-vous-une-chambre-tendance.jpg"].sample(4),
+    photo_urls: ["http://www.h-immo.com/Photo_1367.jpeg", "http://location.lavirotte.com/images/illust/studio.jpg", "https://s-media-cache-ak0.pinimg.com/736x/71/5e/92/715e9221cec4884d4d5afcee7739284a.jpg", "http://resize-elle.ladmedia.fr/r/300,210,center-middle,forcex,000000/img/var/plain_site/storage/images/deco/pieces/chambre/chambre-moderne-3181915/69348118-1-fre-FR/Lecon-de-deco-creez-vous-une-chambre-tendance.jpg"].sample(1),
     user_id: User.pluck(:id).sample,
     published: [true, false].sample
    )
@@ -107,7 +107,7 @@ puts "Annonces Immobilier crées"
     description: Faker::Lorem.paragraph(10),
     price: [2000, 5000, 2300, 8000, 12000].sample,
     location:["Lyon", "Saint Etienne", "Paris", "Lilles", "Nantes", "Marseille", "Nice"].sample,
-    photo_urls: ["http://www.mk-guitar.com/wp-content/uploads/2013/03/Martin-HD-40MK-0022.jpg","http://www.sylvanmusic.com/uploads/1/0/7/9/10798034/5261998_orig.jpg","https://www.guitarpart.fr/wp-content/uploads/2016/11/Gibson_Les_Paul_1958_Mark_Knopfler_1.jpg"].sample(3),
+    photo_urls: ["http://www.mk-guitar.com/wp-content/uploads/2013/03/Martin-HD-40MK-0022.jpg","http://www.sylvanmusic.com/uploads/1/0/7/9/10798034/5261998_orig.jpg","https://www.guitarpart.fr/wp-content/uploads/2016/11/Gibson_Les_Paul_1958_Mark_Knopfler_1.jpg"].sample(1),
     user_id: User.pluck(:id).sample,
     published: [true, false].sample
    )
