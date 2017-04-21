@@ -40,7 +40,7 @@ class AdvertsController < ApplicationController
   private
 
   def params_advert
-    params.require(:advert).permit(:type, :title, :description, :location, :price, :role, :category_id, photos: [])
+    params.require(:advert).permit(:type, :title, :description, :location, :price, :role, :user_id, :category_id, photos: [])
   end
 
   def set_advert
@@ -48,6 +48,7 @@ class AdvertsController < ApplicationController
   end
 
   def filter_adverts
+    return if params[:query].blank?
     @adverts = Advert.search(params[:query][:keyword]).includes(:category) if params[:query][:keyword].present?
     @adverts = Advert.joins(:category).where('categories.name LIKE ?', params[:query][:category]) if params[:query][:category].present?
     @adverts = Advert.where('location LIKE ?', params[:query][:location]) if params[:query][:location].present?
