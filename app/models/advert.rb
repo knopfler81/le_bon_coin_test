@@ -10,4 +10,13 @@ class Advert < ApplicationRecord
   validates :price, presence: true
   validates :location, presence: true
   enum role: { Demande: 0, Offre: 1}
+
+  def self.search(search)
+    if search
+     where(["lower(title) LIKE ?","%#{search.downcase}%"]).order('created_at DESC')
+    else
+      all
+    end
+  end
+
 end
