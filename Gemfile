@@ -23,6 +23,8 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
+gem 'faker'
+
 
 #admin
 gem 'activeadmin', github: 'activeadmin/activeadmin'
