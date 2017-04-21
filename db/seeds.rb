@@ -9,7 +9,7 @@ puts 'Création des catégories'
 animaux     = Category.create(name: "Animaux")
 auto        = Category.create(name: "Automobile")
 immobilier  = Category.create(name: "Immobilier")
-instruments = Category.create(name: "Instruments")
+instrument = Category.create(name: "Instruments")
 
 puts "Les catégories sont crées"
 
@@ -44,7 +44,7 @@ puts "Creation des annonces"
   print "*"
   advert = Advert.new(
     role: [0, 1].sample,
-    category_id: 1,
+    category_id: animaux.id,
     title: ["Chatons très mignons", "Perroquet qui parle trop!", "Lapins nains", "Chiots à réserver", "Troupeau de chèvres"].sample,
     description: Faker::Lorem.paragraph(10),
     price: [0, 230, 1000, 25, 780].sample,
@@ -64,7 +64,7 @@ puts "Annonces Animaux crées"
   print "*"
   advert = Advert.new(
     role: [0, 1].sample,
-    category_id: 2,
+    category_id: auto.id,
     title: ["Très belle Peugeot", "Custom Alpin", "Très belle Ferrari", "Jaguar"].sample,
     description: Faker::Lorem.paragraph(10),
     price: [20000, 50000, 10000, 25000, 7080].sample,
@@ -83,12 +83,12 @@ puts "Annonces Automobiles crées"
   print "*"
   advert = Advert.new(
     role: [0, 1].sample,
-    category_id: 3,
+    category_id: immobilier.id,
     title: ["Grande Maison", "Studio", "Appartement type F1", "Garage deux voitures", "Chambre"].sample,
     description: Faker::Lorem.paragraph(10),
     price: [2000, 500, 2300, 800, 1200].sample,
     location:["Lyon", "Saint Etienne", "Paris", "Lilles", "Nantes", "Marseille", "Nice"].sample,
-    photo_urls: ["http://www.h-immo.com/Photo_1367.jpeg","http://www.lp-transaction.fr/wp-content/uploads/2016/03/maison-a-vendre.png", "http://location.lavirotte.com/images/illust/studio.jpg", "https://s-media-cache-ak0.pinimg.com/736x/71/5e/92/715e9221cec4884d4d5afcee7739284a.jpg", "http://resize-elle.ladmedia.fr/r/300,210,center-middle,forcex,000000/img/var/plain_site/storage/images/deco/pieces/chambre/chambre-moderne-3181915/69348118-1-fre-FR/Lecon-de-deco-creez-vous-une-chambre-tendance.jpg"].sample(4),
+    photo_urls: ["http://www.h-immo.com/Photo_1367.jpeg", "http://location.lavirotte.com/images/illust/studio.jpg", "https://s-media-cache-ak0.pinimg.com/736x/71/5e/92/715e9221cec4884d4d5afcee7739284a.jpg", "http://resize-elle.ladmedia.fr/r/300,210,center-middle,forcex,000000/img/var/plain_site/storage/images/deco/pieces/chambre/chambre-moderne-3181915/69348118-1-fre-FR/Lecon-de-deco-creez-vous-une-chambre-tendance.jpg"].sample(4),
     user_id: User.pluck(:id).sample,
     published: [true, false].sample
    )
@@ -102,7 +102,7 @@ puts "Annonces Immobilier crées"
   print "*"
   advert = Advert.new(
     role: [0, 1].sample,
-    category_id: 4,
+    category_id: instrument.id,
     title: ["Guitare Electrique", "Superbe Stratocaster", "Gibson Les Paul de ouf", "National O style Dobro 1933", "Très belle Martin 40MK"].sample,
     description: Faker::Lorem.paragraph(10),
     price: [2000, 5000, 2300, 8000, 12000].sample,
