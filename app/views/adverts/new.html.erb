@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-10 col-sm-10 col-sm-offset-1 padded">
+    <%= simple_form_for(@advert) do |f| %>
+
+      <%= f.collection_select :category_id, Category.all, :id, :name, prompt: "Type d'annonce" %>
+      <%= f.select :role, Advert.roles.keys.to_a %>
+      <%= f.input  :title, label: "Titre" %>
+      <%= f.input  :description %>
+      <%= f.input  :price, label: "Prix" %>
+      <%= f.input  :location, label: "Localiasation" %>
+      <%= f.input  :address, label: "Adresse" %>
+      <%= f.input  :photos %>
+
+      <%= f.button :submit %>
+
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+
+<div class="col-xs-10 col-xs-offset-1 padded">
+  <%= simple_form_for :query, url: adverts_path, method: :get,  wrapper: :inline_form, html: {class: 'form-inline'} do |f| %>
+
+    <%= f.input  :keyword, placeholder: "Que cherchez-vous?" %>
+    <%= f.input  :location, placeholder: "Cherchez par ville" %>
+    <%= f.button :submit, "RECHERCHER", class:"btn btn-primary"  %>
+  <% end %>
+  </div>
+
+<%= render 'adverts' %>
+
