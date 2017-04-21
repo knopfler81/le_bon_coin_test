@@ -19,3 +19,12 @@
   gem 'jquery-fileupload-rails'
   gem 'coffee-rails'
 ```
+
+*Ajout de la gem `active_admin` pour gérer la modération des annonces et éventuellement des users. Pour modérer les annonces, il faut créer un admin dans la console rails, par exemple on veut que celui qui l'id 1 devienne admin:
+```console
+U = User.find(1)
+U.admin = true
+U.save
+```
+Et hop! Vous êtes admin :)
+Afin de publier une annonce, il vous suffit d'aller dans `localhost:3000/admin` onglets annonces, `edit` et de cocher la check boxe `published`, ainsi l'annonce sera publiée sur le site.
