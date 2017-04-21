@@ -29,4 +29,13 @@ U.save
 Et hop! Vous êtes admin :)
 Afin de publier une annonce, il vous suffit d'aller dans `localhost:3000/admin` onglets annonces, `edit` et de cocher la check boxe `published`, ainsi l'annonce sera publiée sur le site.
 
+* Les routes sont mises à jours, un peu de css
+
+* Ajout de seeds, installation de la gem faker
+
+* Pour se connecter en tant qu'admin utiliser : 
+`email: "admin@leboncoin.com" et password: "password`
+      
+
+
 
