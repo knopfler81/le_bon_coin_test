@@ -4,7 +4,11 @@
       <%= link_to advert_path(advert) do  %>
         <div class="col-xs-10 col-xs-offset-1 advert">
           <div class="col-xs-4">
-              <!-- photos -->
+            <% advert.photos.each_with_index do |photo, index| %>
+              <% if index == 0 %>
+                <%= cl_image_tag photo.path, width: 200, height: 150, crop:"fill" %>
+              <% end %>
+            <% end %>
           </div>
           <div class="col-xs-6">
             <h4> <%= advert.title %></h4>

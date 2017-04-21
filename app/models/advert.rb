@@ -1,4 +1,7 @@
 class Advert < ApplicationRecord
+
+  has_attachments :photos, maximum: 3
+
   belongs_to :user
   belongs_to :category
 
