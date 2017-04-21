@@ -7,6 +7,8 @@ Ce template comporte également une pré organisation du CSS
 
 *Je commit
 
-* Je créer le model `advert` ainsi que ses migrations
+* Je créer le model `advert` ainsi que ses migrations, ses validations
+
+* Je créer le controller `adverts` , les vues, les routes. 
 
 
