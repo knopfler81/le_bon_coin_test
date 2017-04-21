@@ -1,0 +1,17 @@
+<% if current_user.id == @user.id %>
+  <h2>Mes données personnelles</h2>
+  <h5><b>Prénom</b>:   <%= @user.first_name? ? @user.first_name : "N'a pas été renseigné" %></h5>
+  <h5><b>Nom</b>:      <%= @user.last_name? ? @user.last_name : "N'a pas été renseigné" %></h5>
+  <h5><b>Pseudo</b>:   <%= @user.nickname? ? @user.nickname : "N'a pas été renseigné" %></h5>
+  <h5><b>Email</b>:    <%= @user.email? ? @user.email : "N'a pas été renseigné" %></h5>
+  <h5><b>Région</b>:  <%= @user.region? ? @user.region : "N'a pas été renseigné" %></h5>
+  <h5><b>Département</b>: <%= @user.departement? ? @user.departement : "N'a pas été renseigné" %></h5>
+  <h5><b>Adresse</b>: <%= @user.address? ? present? : "N'a pas été renseigné" %></h5>
+  <h5><b>Code Postal</b>: <%= @user.zipcode? ? @user.zipcode : "N'a pas été renseigné" %></h5>
+  <h5><b>Ville</b>: <%= @user.city? ? @user.city : "N'a pas été renseigné" %></h5>
+  <h5><b>Téléphone</b>: <%= @user.phone? ? @user.phone: "N'a pas été renseigné" %></h5>
+  <h5><b>Date de naissance</b>: <%= @user.birthdate ? @user.birthdate : "N'a pas été renseigné" %></h5>
+
+<% end %>
+
+<%= link_to "Modifier", edit_user_registration_path, class:"btn btn-primary"  %>
